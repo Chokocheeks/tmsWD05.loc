@@ -3,7 +3,7 @@ include_once 'db.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     echo "<pre>";
-    print_r($_POST);
+    // print_r($_POST);
     echo "</pre>";
     $title = $_POST['title'];
     $content = $_POST['content'];
@@ -15,4 +15,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $sql = "INSERT INTO wd05.posts (title, content, img) VALUES ('$title', '$content','$filePath');";
     mysqli_query($connection, $sql);
 }
+echo "<pre>";
+print_r($_FILES);
+echo "</pre>";
+
+
 ?>

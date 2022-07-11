@@ -4,12 +4,12 @@ session_start();
 //     echo "go to log in";
 //     die;
 // }
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-echo "<pre>";
-print_r($_FILES);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_POST);
+// echo "</pre>";
+// echo "<pre>";
+// print_r($_FILES);
+// echo "</pre>";
 // if(!empty($_FILES) && isset($_FILES['img'])){
 //     copy($_FILES['img']['tmp_name'], __DIR__.'/2.jpeg');
 //     move_uploaded_file($_FILES['img']['tmp_name'], __DIR__.'/1.jpeg');
@@ -34,7 +34,7 @@ echo "</pre>";
         <textarea name="content" id="editor"></textarea>
         <br>
         <br>
-        <input type="file" name="img">
+        <input type="file" name="img[] " multiple>
         <br>
         <br>
         <button type="submit">SEND</button>
