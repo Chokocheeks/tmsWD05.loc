@@ -34,7 +34,7 @@ session_start();
         <textarea name="content" id="editor"></textarea>
         <br>
         <br>
-        <input type="file" name="img[] " multiple>
+        <input type="file" name="img" multiple>
         <br>
         <br>
         <button type="submit">SEND</button>
@@ -46,6 +46,10 @@ session_start();
                 console.error( error );
             } );
     </script> -->
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file[]" multiple>
+        <input type="submit" value="SEND">
+    </form>
     <style>
             #container {
                 width: 1000px;
