@@ -15,9 +15,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $sql = "INSERT INTO wd05.posts (title, content, img) VALUES ('$title', '$content','$filePath');";
     mysqli_query($connection, $sql);
 }
-echo "<pre>";
-print_r($_FILES);
-echo "</pre>";
-
 
 ?>
