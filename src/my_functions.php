@@ -34,7 +34,7 @@ function arrX(array $arr, int $int){
 }
 
 $arrTest =[55, 78, 15, 6, 58];
-debug(arrX($arrTest, 5));
+//debug(arrX($arrTest, 5));
 
 function exponentiation($a, $ex){
     $res = $a;
@@ -45,7 +45,7 @@ function exponentiation($a, $ex){
     return $res;
 }
 
-debug(exponentiation(15, 2));
+//debug(exponentiation(15, 2));
 
 function lowerCase($str){
 	if(ctype_lower($str)){
@@ -54,7 +54,7 @@ function lowerCase($str){
 		echo "В строке $str присутствуют символы в верхнем регистре \n";
 	}	
 }
-print_r(lowerCase('hwwAAAAjhR'));
+//print_r(lowerCase('hwwAAAAjhR'));
 
 function lowerCaseTwo($str){
 	if($str === mb_strtolower($str)){
@@ -63,7 +63,7 @@ function lowerCaseTwo($str){
 		echo "В строке $str присутствуют символы в верхнем регистре \n";
 	}	
 }
-print_r(lowerCaseTwo('hww'));
+//print_r(lowerCaseTwo('hww'));
 
 function randArray($size){
 	for($i = 0; $i < $size; $i++){
@@ -71,7 +71,7 @@ function randArray($size){
 	}
 	return $arr;
 }
-var_dump(randArray(20));
+//var_dump(randArray(20));
 
 function dayOfWeek($a){
 	switch($a){
@@ -101,7 +101,7 @@ function dayOfWeek($a){
 			
 	}
 }
-var_dump(dayOfWeek(1));
+//var_dump(dayOfWeek(1));
 
 function fibo($num) { 
     if ($num < 1){

@@ -1,10 +1,55 @@
 
 <?php
 session_start();
-echo md5(1111);
+
+//echo md5(1111);
 $_SESSION['ggggg'] = 123456789;
 include_once 'db.php';
 include_once 'my_functions.php';
+include_once 'Human.php';
+include_once 'Animal.php';
+include_once 'Student.php';
+include_once 'Worker.php';
+
+$worker1 = new Worker("Ivan", 25, 1000);
+
+$worker2 = new Worker("Vasya", 26, 2000);
+
+
+var_dump($worker1->salary + $worker2->salary);
+echo "<br/>";
+echo "<br/>";
+var_dump($worker1->age + $worker2->age);
+
+echo "<br/>";
+echo "<br/>";
+
+$student1 = new Student("Veronka", null, "female");
+$student1->sayHello();
+$student1->sayAnswer();
+
+
+
+$human1 = new Human('Igor', 32, 'male');
+echo $human1->sayHello();
+echo "<br/>";
+$human2 = new Human('Egor', 17, 'male');
+// $human2->name = 'Egor';
+// $human2->age = 17;
+// $human2->sex = 'male';
+echo $human2->sayHello();
+echo "<br/>";
+
+$human1->setName('bloha');
+
+var_dump($human1->getName());
+var_dump($human1);
+
+$animal1 = new Animal("catino", 4);
+$animal2 = new Animal("microbo", 0);
+echo $animal2->sayHello();
+
+
 $res = mysqli_query($connection, 'select * FROM posts');
 $posts = mysqli_fetch_all($res, MYSQLI_ASSOC);
 ?>
